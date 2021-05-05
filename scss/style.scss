@@ -200,6 +200,10 @@ header{
     }
 }
 
+.f-courses{
+    @include margin(7rem 0  5rem 0);
+}
+
 .vmst{
     background-image: url('../img/vmst.jpg');
     @include padding(3rem 0);
