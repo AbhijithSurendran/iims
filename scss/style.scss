@@ -17,6 +17,9 @@ h1,h2,h3,h4,h5,h6{
         font-weight: 200;  
     }
 }
+.title-color{
+    color: #073B71;
+}
 header{
     position: fixed;
     top: 0;
@@ -279,9 +282,35 @@ header{
                 }
             }
             h4{
-                color: #073B71;
                 text-transform: capitalize;
             }
+        }
+    }
+}
+
+.contact-form{
+    background-image: url('../img/form.jpg');
+    @include padding(5rem 0);
+    .texting{
+        color: #ffffff;
+        h2{
+            @include font-size(3rem);
+        }
+        p{
+            line-height: 2;
+        }
+    }
+}
+.affliation{
+    @include margin(4rem 0);
+    ul{
+        @include margin(2rem 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li{
+            list-style: none;
+            display: inline-flex;
         }
     }
 }
