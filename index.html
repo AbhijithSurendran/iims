@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="icons/icons.css">
     <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <link rel="stylesheet" href="css/glider.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
                         <a href="#"><i class="icon-twitter"></i></a>
                         <a href="#"><i class="icon-instagram"></i></a>
                         </li>
-                        <li>
+                        <li class="header-page-links">
                             <ul>
                                 <li><a href="">Partners</a></li>
                                 <li><a href="">Training Programs</a></li>
@@ -54,29 +54,29 @@
                 <a class="navbar-brand" href="index.html">
                     <img src="img/iims-logo.svg" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="img/toggler.svg" alt="">
                 </button>
-                <div class="collapse navbar-collapse ms-auto" id="navbarNavAltMarkup">
-                    <div class="search-bar mb-3 mt-1">
-                        <ul>
-                            <li>
-                                <button class="btn btn-accent btn-sm register-btn">
-                                    register now
-                                </button>
-                                <div class="input-group rounded">
-                                    <input type="text" class="form-control bg-transparent border-0" placeholder="Search">
-                                    <span class="input-group-text border-0 p-0 bg-transparent">
-                                        <button class="p-0 px-2 bg-transparent border-0 "><i class="icon-search"></i></button>
-                                    </span>
-                                </div>
-                            </li>
-                            
-                        </ul>
-                    </div>
+                <div class="search-bar mb-3 mt-1">
+                    <ul>
+                        <li>
+                            <button class="btn btn-accent btn-sm register-btn">
+                                register now
+                            </button>
+                            <div class="input-group rounded">
+                                <input type="text" class="form-control bg-transparent border-0" placeholder="Search">
+                                <span class="input-group-text border-0 p-0 bg-transparent">
+                                    <button class="p-0 px-2 bg-transparent border-0 "><i class="icon-search"></i></button>
+                                </span>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse ms-auto" id="navbarNavAltMarkup">                    
                         <div class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link active" href="index.html">Home</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -90,14 +90,30 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Courses
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                <li><a class="dropdown-item" href="#">Vision & Mission</a></li>
-                                <li><a class="dropdown-item" href="#">Services</a></li>
-                                <li><a class="dropdown-item" href="#">Our Team</a></li>
-                                <li><a class="dropdown-item" href="#">Affiliates</a></li>
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Courses </a>
+                                <ul class="dropdown-menu">                                    
+                                    <li>
+                                      <a class="dropdown-item" href="#"> AHA Courses </a>
+                                        <ul class="submenu dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Basic Life Support – BLS</a></li>
+                                            <li><a class="dropdown-item" href="#">Advanced Cardiovascular Life Support – ACLS</a></li>
+                                            <li><a class="dropdown-item" href="#">Pediatric Advanced Life Support (PALS)</a></li>
+                                            <li><a class="dropdown-item" href="#">Heart Saver First Aid CPR</a></li>
+                                            <li><a class="dropdown-item" href="#">ECG & Pharmacology</a></li>
+                                            <li><a class="dropdown-item" href="#">Airway Management</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"> Trauma Courses </a>
+                                          <ul class="submenu dropdown-menu">
+                                              <li><a class="dropdown-item" href="#">ATLS-Advanced Trauma Life Support</a></li>
+                                              <li><a class="dropdown-item" href="#">ATCN-Advanced Trauma Care For Nurses</a></li>
+                                              <li><a class="dropdown-item" href="#">ITLS-International Trauma Life Support</a></li>
+                                              <li><a class="dropdown-item" href="#">PHTLS – Prehospital Trauma Life Support</a></li>
+                                              <li><a class="dropdown-item" href="#">AMLS – Advanced Medical Life Support</a></li>
+                                              <li><a class="dropdown-item" href="#">EPC – Emergency Pediatric Care</a></li>
+                                          </ul>
+                                    </li>                                  
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -819,10 +835,10 @@
 
     
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="js/glider.min.js"></script>
 
     <script>
-        // courses
+        // courses slider
         new Glider(document.querySelector('.glider'), {
             slidesToShow: 4.5,
             slidesToScroll: 1,
@@ -833,7 +849,7 @@
             }
         });
 
-        // news
+        // news slider
         new Glider(document.querySelector('.glider-news'), {
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -843,6 +859,49 @@
                 next: '.news-next'
             }
         });
+        // multi level drop down
+        window.addEventListener("resize", function() {
+                "use strict"; window.location.reload(); 
+            });
+
+            document.addEventListener("DOMContentLoaded", function(){
+                
+                // make it as accordion for smaller screens
+                if (window.innerWidth < 992) {
+
+                    // close all inner dropdowns when parent is closed
+                    document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+                        everydropdown.addEventListener('hidden.bs.dropdown', function () {
+                            // after dropdown is hidden, then find all submenus
+                            this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                                // hide every submenu as well
+                                everysubmenu.style.display = 'none';
+                            });
+                        })
+                    });
+                    
+                    document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+                        element.addEventListener('click', function (e) {
+                
+                            let nextEl = this.nextElementSibling;
+                            if(nextEl && nextEl.classList.contains('submenu')) {	
+                                // prevent opening link if link needs to open dropdown
+                                e.preventDefault();
+
+                                if(nextEl.style.display == 'block'){
+                                    nextEl.style.display = 'none';
+                                } else {
+                                    nextEl.style.display = 'block';
+                                }
+
+                            }
+                        });
+                    })
+                }
+                // end if innerWidth
+
+            }); 
+            // DOMContentLoaded  end
     </script>
 </body>
 </html>

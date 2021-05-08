@@ -1,5 +1,6 @@
 @import '../node_modules//bootstrap/scss/bootstrap.scss';
 @import 'button';
+@import 'mixins';
 :root{
     --orange:#f4761b;
     --accent:#1abab4;
@@ -8,7 +9,7 @@
 
 html,body{
     font-family: 'Proxima-Nova';
-    font-weight: 300;
+    font-weight: 300; 
     font-size: 16px;
     overflow-x: hidden;
 }
@@ -77,15 +78,29 @@ header{
                 }
             }
         } 
-        
+        @include m-start{
+            .header-page-links{
+                display: none;
+            }
+        }
     }
     .navbar{
         background-color: #06284B;
+        padding-bottom: 0;
+        @include m-mobile{
+            .navbar-brand{
+                width: 70px;
+            }
+        }
         .collapse{
             flex-flow: column;
             align-items: flex-end;
+            margin-top: 64px;
         }
         .search-bar{
+            position: absolute;
+            right: 3vw;
+            top: .8vw;
             display: flex;
             flex-flow: row;
             width: 100%;
@@ -122,6 +137,10 @@ header{
                     }
                 }
             }
+            @include m-mobile{
+                position: absolute;
+                top: 0;
+            }
         }
         .navbar-nav{
             .nav-item{
@@ -131,11 +150,20 @@ header{
                     font-weight: 500;
                     @include margin-left(1rem);
                     @include font-size(.8rem);
+                    border-bottom: 4px solid transparent;
+                    @include padding(.8rem 2rem);
+                    &:hover{
+                        border-color: #55b8dd;
+                    }
+                }
+                .active{
+                    border-color: #55b8dd;
                 }
             }
         }
     }
 }
+
 
 #hero-slider{
     .carousel-caption{
@@ -304,11 +332,7 @@ header{
             top: 8px;
         }
     }
-    .glider-container-course{
-        // align-items: flex-start;
-        // display: flex;
-        // justify-content: flex-start;
-    }
+    
 }
 .poster{
     @include margin-bottom(5rem);
@@ -581,3 +605,35 @@ footer{
         }
     }
 }
+
+/* ============ Multi level dropdown desktop view ============ */
+@media all and (min-width: 992px) {
+
+	.dropdown-menu li{
+		position: relative;
+	}
+	.dropdown-menu .submenu{ 
+		display: none;
+		position: absolute;
+		left:100%; top:-7px;
+	}
+	.dropdown-menu .submenu-left{ 
+		right:100%; left:auto;
+	}
+
+	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+	.dropdown-menu > li:hover > .submenu{
+		display: block;
+	}
+}	
+/* ============ Multi level dropdown  desktop view .end// ============ */
+
+/* ============ Multi level dropdown  small devices ============ */
+@media (max-width: 991px) {
+
+.dropdown-menu .dropdown-menu{
+		margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+}
+
+}	
+/* ============ Multi level dropdown  small devices .end// ============ */
