@@ -1,9 +1,16 @@
 @import '../node_modules//bootstrap/scss/bootstrap.scss';
+@import 'button';
+:root{
+    --orange:#f4761b;
+    --accent:#1abab4;
+    --primary: #06284b;
+}
 
 html,body{
     font-family: 'Proxima-Nova';
     font-weight: 300;
     font-size: 16px;
+    overflow-x: hidden;
 }
 img{
     width: 100%;
@@ -16,6 +23,10 @@ h1,h2,h3,h4,h5,h6{
     &::placeholder{
         font-weight: 200;  
     }
+}
+.form-select{
+    color: #6c757d;
+    font-weight: 200;
 }
 .title-color{
     color: #073B71;
@@ -204,17 +215,103 @@ header{
     @include margin(7rem 0  5rem 0);
     .f-course-container{
         position: relative;
-        .course-title{
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            @include padding(1rem);
-            color: #fff;
-            h5{
-                @include font-size(1.5rem);
+        margin-right: 1rem;
+        .f-course-content{
+            position: relative;
+            cursor: pointer;  
+            border-radius: .5rem;       
+            img{
+                border-radius: .5rem;
             }
+            .course-title{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                @include padding(1rem);
+                color: #fff;
+                border-radius: .5rem;
+                h5{
+                    @include font-size(1rem);
+                }
+            }
+            .course-title-hover{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: #ffffff;
+                border-radius: .5rem;
+                background-color: rgba(6, 40, 75, 0.829);
+                h5{
+                    @include font-size(1rem);
+                }
+                p{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    @include font-size(.8rem);
+                }
+                .link{
+                    border-top: 1px solid #6d7073;
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    @include padding(1rem);
+                    margin-top: auto;
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                        @include font-size(1rem)
+                    }
+                    &:hover{
+                        background-color: #F4761B;
+                        border-radius: 0 0 .4rem .4rem;
+                    }
+                    .plus-icon{
+                        width: 18px;
+                        display: block;
+                        margin: auto;
+                    }
+                }
+            }
+            &:hover{
+                .course-title{
+                    display: none;
+                }
+                .course-title-hover{
+                    display: flex;
+                    flex-flow: column;                   
+                }
+            }            
+        } 
+        .course-logo{
+            width: 150px;
+            height: 70px;
+            object-fit: contain;
+        }       
+    }
+    .slider-arrows{
+        position: relative;
+        .glider-prev{
+            right: 95px;
+            left: auto;
+            top: 8px;
         }
     }
+    .glider-container-course{
+        // align-items: flex-start;
+        // display: flex;
+        // justify-content: flex-start;
+    }
+}
+.poster{
+    @include margin-bottom(5rem);
 }
 
 .vmst{
@@ -230,6 +327,13 @@ header{
     }
     .mv-container{
         position: relative;
+        .link-arrw{
+            width: 60px;
+            margin: auto;
+            @include margin-top(1.5rem);
+            display: flex;
+            opacity: 0;
+        }
         &::before{
             content: 'OUR';
             position: absolute;
@@ -258,6 +362,9 @@ header{
             &::before{
                 opacity: .1;
             }
+            .link-arrw{
+                opacity: 1;
+            }
         }
         
         .link{
@@ -279,7 +386,7 @@ header{
 }
 
 .key-feaatures{
-    @include padding(4rem 0);
+    @include padding(5rem 0);
     .card{
         @include padding(1rem 1rem 3rem);
         height: 100%;
@@ -303,6 +410,9 @@ header{
             }
         }
     }
+    h3{
+        @include margin-bottom(2rem);
+    }
 }
 
 .contact-form{
@@ -318,8 +428,15 @@ header{
         }
     }
 }
+
 .affliation{
-    @include margin(4rem 0);
+    @include margin-bottom(4rem);
+    .container{
+        background-color: #f5f5f5;        
+        @include padding-top(4rem);
+        @include padding-bottom(4rem);
+        border-radius: 0 0 1rem 1rem;
+    }
     ul{
         @include margin(2rem 0);
         display: flex;
@@ -328,6 +445,139 @@ header{
         li{
             list-style: none;
             display: inline-flex;
+            img{
+                width: 150px;
+                height: 90px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.news{
+    @include margin-bottom(5.5rem);
+    @include margin-top(1.5rem);
+    .glider-contain{
+        margin-left: 15px;
+    }
+    .card{
+        @include margin-right(1rem);
+        .card-body{
+            .card-text{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                @include font-size(1rem);
+            }
+        }
+    }
+}
+
+.branch{
+    background-color: #4E6076;
+    @include padding(2rem 0);
+    ul{
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        margin: 0;
+        li{
+            list-style: none;
+            display: inline-flex;
+            flex-flow: column;
+            color: #ffffff;
+            span{
+                display: block;
+                @include font-size(.8rem);
+                a{
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+                &:first-child{
+                    font-weight: 500;
+                    @include font-size(1.1rem);
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: #05182E;
+    @include padding(2rem 0);
+    .link{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            line-height: 2;
+            &:first-child{
+                a{
+                    color: #fff;
+                    font-weight: 500;
+                }
+            }
+            a{  
+                text-decoration: none;
+                color: #abbcc1;
+                @include font-size(.8rem);
+                &:hover{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    .news-letter{
+        color: #ffffff;
+        small{
+            color: #abbcc1;
+            margin-bottom: .8rem;
+            display: block;
+        }
+        .form-group{
+            margin-bottom: 1rem;
+        }
+        h5{
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+        .form-control{
+            background-color: #122b48;
+            border: 0;
+            @include font-size(1rem);
+            &::placeholder{
+                color: #ffffff;
+            }
+        }
+    }
+    .social-ft{
+        @include margin-top(2.5rem);
+        flex-flow: column;
+        ul{
+            padding: 0;
+            margin: 0;
+            li{
+                all:unset;
+                display: inline-flex;
+                @include margin-right(2rem);
+                a{  
+                    display: flex;
+                    color: #abbcc1;
+                    text-decoration: none;
+                    flex-flow: column;
+                    align-items: center;
+                    span{
+                        display: flex;
+                    }
+                    i{
+                        &::before{
+                            color: var(--orange);
+                        }
+                    }
+                }
+            }
         }
     }
 }

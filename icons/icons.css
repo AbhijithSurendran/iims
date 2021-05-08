@@ -67,9 +67,11 @@
 }
 .icon-round-arrow-left:before {
   content: "\e93b";
+  color: #81bbe5;
 }
 .icon-round-arrow-right:before {
   content: "\e93c";
+  color: #81bbe5;
 }
 .icon-search:before {
   content: "\e93d";
