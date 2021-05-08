@@ -12,5 +12,8 @@
   "dependencies": {
     "bootstrap": "^5.0.0-beta3",
     "bootstrap-icons": "^1.4.1"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
   }
 }

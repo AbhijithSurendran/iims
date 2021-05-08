@@ -92,6 +92,11 @@ header{
                 width: 70px;
             }
         }
+        @media (max-width: 1100px) and (min-width: 992px){
+            .navbar-brand{
+                width: 100px;
+            }
+        }
         .collapse{
             flex-flow: column;
             align-items: flex-end;
@@ -119,9 +124,15 @@ header{
                         min-width: 150px;
                         @include font-size(.7rem);
                         margin-right: 1rem;
+                        @include m-mobile{
+                            font-size: .6rem;
+                            min-width: 100px;
+                            padding: .5rem;
+                            line-height: .5;
+                        }
                     }
                     .input-group{
-                        background-color: rgba(255,225,255,.08);
+                        background-color: rgba(255,225,255,.08);                        
                         .form-control{
                             line-height: 0;
                             font-size: .8rem;
@@ -133,13 +144,24 @@ header{
                                 outline: 0;
                                 box-shadow: none;
                             }
+                            @include m-mobile{
+                                display: none;                                
+                            }
+                        }
+                        @include m-mobile{
+                            background-color: transparent;
+                            border: 1px solid rgba(255,225,255,.08);
+                            
                         }
                     }
                 }
             }
             @include m-mobile{
                 position: absolute;
-                top: 0;
+                top: 3px;
+                .icon-search:before{
+                    font-size: .7rem;
+                }
             }
         }
         .navbar-nav{
@@ -151,19 +173,41 @@ header{
                     @include margin-left(1rem);
                     @include font-size(.8rem);
                     border-bottom: 4px solid transparent;
-                    @include padding(.8rem 2rem);
+                    padding: .8rem 2rem;
                     &:hover{
                         border-color: #55b8dd;
+                    }
+                    @media screen and (max-width: 1310px) and (min-width: 1101px) {
+                        padding: .8rem 1rem;
+                    }
+                    @media (max-width: 1100px) and (min-width: 992px){
+                        padding: .8rem .5rem;
                     }
                 }
                 .active{
                     border-color: #55b8dd;
                 }
             }
+            
+        }
+        @include m-mobile{
+            .navbar-toggler{
+                margin-top: 35px;
+                margin-bottom: 8px;
+            }
+        }
+        
+    }
+}
+@include m-mobile{
+    .search-btn{
+        &:active{
+            header .navbar .search-bar ul li .input-group .form-control{
+                display: block;
+            }
         }
     }
 }
-
 
 #hero-slider{
     .carousel-caption{
