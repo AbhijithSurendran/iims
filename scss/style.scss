@@ -15,6 +15,12 @@ html,body{
 img{
     width: 100%;
 }
+a{    
+    text-decoration: none;
+}
+p{
+    line-height: 2.5;
+}
 h1,h2,h3,h4,h5,h6{
     font-weight: 500;
 }
@@ -52,7 +58,6 @@ header{
                 a{
                     color: #fff;
                     font-weight: 500;
-                    text-decoration: none;
                 }
                 i{
                     margin: 0 .5rem;
@@ -390,7 +395,6 @@ header{
                     margin-top: auto;
                     a{
                         color: #fff;
-                        text-decoration: none;
                         @include font-size(1rem)
                     }
                     &:hover{
@@ -471,9 +475,6 @@ header{
         @include font-size(3rem);
         @include margin-bottom(4rem);
     }
-    p{
-        line-height: 2;
-    }
     .mv-container{
         position: relative;
         .link-arrw{
@@ -527,7 +528,6 @@ header{
             z-index: 3;
             a{
                 color: #fff;
-                text-decoration: none;
                 z-index:3;
             }
         }
@@ -579,9 +579,6 @@ header{
         color: #ffffff;
         h2{
             @include font-size(3rem);
-        }
-        p{
-            line-height: 2;
         }
     }
 }
@@ -695,7 +692,6 @@ header{
                 @include font-size(.8rem);
                 a{
                     color: #ffffff;
-                    text-decoration: none;
                 }
                 &:first-child{
                     font-weight: 500;
@@ -734,7 +730,6 @@ footer{
                 }
             }
             a{  
-                text-decoration: none;
                 color: #abbcc1;
                 @include font-size(.8rem);
                 &:hover{
@@ -785,7 +780,6 @@ footer{
                 a{  
                     display: flex;
                     color: #abbcc1;
-                    text-decoration: none;
                     flex-flow: column;
                     align-items: center;
                     span{
@@ -809,7 +803,6 @@ footer{
         }
         a{
             color: #627276;
-            text-decoration: none;
             font-size: .8rem;
             font-weight: 300;
             &:hover{
@@ -826,7 +819,6 @@ footer{
     .go-top{
         button{
             color: #abbcc1;
-            text-decoration: none;
             font-size: .6rem;
             display: block;
             margin: auto;
@@ -894,7 +886,6 @@ footer{
         color: #adb2b9;
         a{            
             color: #adb2b9;
-            text-decoration: none;
         }
         .active{
             color: #2f5d91;
@@ -903,7 +894,7 @@ footer{
 }
 .page-banner{
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     .page-title{
         position: absolute;
         bottom: -25px;
@@ -916,14 +907,24 @@ footer{
             @include font-size(2.5rem);
         }
     }
+    .detail-page-title{
+        position: absolute;
+        top: 50%;
+        left: 3rem;
+        h6{
+            color: #909EAC;
+            font-weight: 300;
+        }
+        @include mobile-start{
+            left: 1rem;
+        }
+    }
 }
 
 .about{
     position: relative;
     @include margin (3rem 0);
-    p{
-        line-height: 2.5;
-    }
+    
     .content-area{        
         position: relative;
         .slider-goals{
@@ -974,9 +975,6 @@ footer{
 .prseident-msg{
     background-color: #F7F7F7;
     position: relative;
-    p{
-        line-height: 2;
-    }
     .pr{
        width: 100px; 
     }
@@ -1017,6 +1015,7 @@ footer{
                 background-position: top;
                 @include padding(3rem 0);
                 color: #ffffff; 
+                border-radius: 1rem 1rem 0 0;
             }
             .h1{                
                 @include font-size(3rem);
@@ -1040,6 +1039,153 @@ footer{
         }      
     }
 }
+.courses{
+    .input-group{
+        height: 56px;
+    }
+    .input-group-text{
+        background-color: #F8F8F8;
+        color: #bfc3c6;
+        font-weight: 300;
+    }
+    .accordion{
+        .accordion-item{
+            border-left: 0;
+            border-right: 0;
+            &:first-child{
+                border-top: 0;
+            }
+        }
+        .accordion-button{
+            color: #073B71;
+            padding-left: 0;
+            padding-right: 0;
+            @include font-size(1.5rem);
+            &:focus{
+                box-shadow: none;
+            }
+            &:after{
+                background-image: url('../img//+.svg');
+                width: 20px;
+                height: 35px;
+                background-size: contain;
+                background-position: bottom;
+            }
+            &:not(.collapsed){
+                background-color: transparent;
+                box-shadow: none;
+                &::after{
+                    background-image: url('../img/—.svg');
+                    transform: unset;
+                }                
+            }
+        }
+        .accordion-body{
+            padding-left: 0;
+            padding-right: 0;
+            img{
+                border-radius: 1rem;
+            }
+            h4{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; /* number of lines to show */
+                -webkit-box-orient: vertical;
+                min-height: 90px;
+            }
+        }
+    }
+    
+}
+
+.courses-detail{
+    ul{
+        li{
+            margin-bottom: 1rem;
+            &:before{
+                width: 14px;
+                height: 14px;
+                background-image: url('../img/list-style.svg');
+                content: '';
+                display: inline-flex;
+                margin-right: 1rem;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            list-style: none;
+        }
+    }
+    small{
+        color: #073B71;
+        font-size: 1.2rem;
+    }
+}
+
+.affiliates-pages{
+    .card-img-top{
+        width: 200px;
+        margin: auto;
+        height: 100px;
+        object-fit: contain;
+    }
+    .card-subtitle{
+        font-weight: 300;
+        font-size: 1rem;
+        color: #000;
+    }
+    .card-link{
+        color: #84A5C6;
+        text-transform: uppercase;
+    }
+}
+
+.traning-programs{
+    .card{
+        .card-title{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* number of lines to show */
+            -webkit-box-orient: vertical;
+            min-height: 50px;
+        }
+        .card-link{
+            width: 100%;
+            color: #06284B;
+            border-top: 1px solid #EAECEF;
+            display: block;
+            padding-top: 1rem;
+            margin-top: .5rem;
+        }
+    }
+}
+
+.board-of-directors{
+    img{
+        display: block;
+        width: 200px;
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // container-custom size
 
 @media (min-width: 1400px) and (max-width: 2000px){
