@@ -12,6 +12,12 @@ html,body{
     font-weight: 300; 
     font-size: 16px;
 }
+.form-control{
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}
 img{
     width: 100%;
 }
@@ -1168,10 +1174,55 @@ footer{
         margin-bottom: 1rem;
     }
 }
+.register{
+    input, .form-select{
+        height: 46px;
+        background-color: #FAFAFA;
+        border-color: #DFE4E8;
+    }
+    textarea{
+        background-color: #FAFAFA;
+        border-color: #DFE4E8;
+    }
+    .input-group{
+        .input-group-text{
+            background-color: #FAFAFA;
+            border-right: 0;
+            font-weight: 300;
+            img{
+                margin-right: .5rem;
+            }
+        }
+    }
+    
+}
 
+.contact-us-page{
+    p{
+        line-height: 2;
+        font-size: .9rem;
+    }
+}
 
-
-
+.vision-and-mission{
+    .box{
+        background-color: #F5F5F5;
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+}
+.contact-con{
+    margin: 3rem 0;
+    .content-con{
+        background-image: url('../img/contact-consultancy.jpg');
+        background-position: left;
+        background-size: cover;
+        padding: 7rem 2rem;
+        border-radius: 1rem;
+        background-repeat: no-repeat;
+        border: 1px solid #E5EAEF;
+    }
+}
 
 
 
