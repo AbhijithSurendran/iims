@@ -92,9 +92,9 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown">Courses </a>
                                 <ul class="dropdown-menu">                                    
-                                    <li>
-                                      <a class="dropdown-item" href="#"> AHA Courses </a>
-                                        <ul class="submenu dropdown-menu">
+                                    <li class="has-submenu">
+                                      <a class="dropdown-item dropdown-toggle" href="#"> AHA Courses </a>
+                                        <ul class="megasubmenu dropdown-menu">
                                             <li><a class="dropdown-item" href="courses-detail.html">Basic Life Support – BLS</a></li>
                                             <li><a class="dropdown-item" href="courses-detail.html">Advanced Cardiovascular Life Support – ACLS</a></li>
                                             <li><a class="dropdown-item" href="courses-detail.html">Pediatric Advanced Life Support (PALS)</a></li>
@@ -103,9 +103,9 @@
                                             <li><a class="dropdown-item" href="courses-detail.html">Airway Management</a></li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#"> Trauma Courses </a>
-                                          <ul class="submenu dropdown-menu">
+                                    <li class="has-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#"> Trauma Courses </a>
+                                          <ul class="megasubmenu dropdown-menu">
                                               <li><a class="dropdown-item" href="courses-detail.html">ATLS-Advanced Trauma Life Support</a></li>
                                               <li><a class="dropdown-item" href="courses-detail.html">ATCN-Advanced Trauma Care For Nurses</a></li>
                                               <li><a class="dropdown-item" href="courses-detail.html">ITLS-International Trauma Life Support</a></li>
@@ -114,25 +114,25 @@
                                               <li><a class="dropdown-item" href="courses-detail.html">EPC – Emergency Pediatric Care</a></li>
                                           </ul>
                                     </li>                                  
-                                    <li>
-                                        <a class="dropdown-item" href="#"> NDLSF Courses </a>
-                                          <ul class="submenu dropdown-menu">
+                                    <li class="has-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#"> NDLSF Courses </a>
+                                          <ul class="megasubmenu dropdown-menu">
                                               <li><a class="dropdown-item" href="courses-detail.html">CDLS – Core Disaster Life Support</a></li>
                                               <li><a class="dropdown-item" href="courses-detail.html">BDLS – Basic Disaster Life Support</a></li>
                                               <li><a class="dropdown-item" href="courses-detail.html">ADLS – Advanced Disaster Life Support</a></li>
                                           </ul>
                                     </li>                                  
-                                    <li>
-                                        <a class="dropdown-item" href="#">Toxicology Courses</a>
-                                          <ul class="submenu dropdown-menu">
+                                    <li class="has-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Toxicology Courses</a>
+                                          <ul class="megasubmenu dropdown-menu">
                                               <li><a class="dropdown-item" href="courses-detail.html">AHLS – Advanced Hazmat Life Support</a></li>
                                               <li><a class="dropdown-item" href="courses-detail.html">BHLS – Basic Hazmat Life Support</a></li>
                                               <li><a class="dropdown-item" href="courses-detail.html">ADLS – Advanced Disaster Life Support</a></li>
                                           </ul>
                                     </li>                                  
-                                    <li>
-                                        <a class="dropdown-item" href="#">EMT Courses</a>
-                                          <ul class="submenu dropdown-menu">
+                                    <li class="has-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">EMT Courses</a>
+                                          <ul class="megasubmenu dropdown-menu">
                                               <li><a class="dropdown-item" href="courses-detail.html">Emergency Medical Technician Basic</a></li>
                                               <li><a class="dropdown-item" href="courses-detail.html">Emergency Medical Technician Advanced</a></li>
                                               <li><a class="dropdown-item" href="courses-detail.html">Paramedic</a></li>
@@ -294,7 +294,7 @@
                 <div class="col-12">
                     <h6>We bring you the best courses from</h6>
                     <h2 class="h1">World Champions</h2>
-                    <a href="services.html" class="btn secondary-btn px-5">Register Now</a>
+                    <a href="register.html" class="btn secondary-btn px-5">Register Now</a>
                 </div>
             </div>
             <div class="row content-bg">
@@ -463,76 +463,44 @@
     <script src="js/glider.min.js"></script>
 
     <script>
-       //glider-affliation
-       new Glider(document.querySelector('.glider-affliation'), {
-            // Mobile-first defaults
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            draggable: true,
-            responsive: [
-                {
-                // screens greater than >= 775px
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    itemWidth: 150,
-                    duration: 0.25
-                }
-                },{
-                // screens greater than >= 1024px
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
-                }
-                }
-            ]
-        });
+       document.addEventListener("DOMContentLoaded", function(){
+             /////// Prevent closing from click inside dropdown
+                document.querySelectorAll('.dropdown-menu').forEach(function(element){
+                element.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+                });
 
-        // multi level drop down
-            window.addEventListener("resize", function() {
-                "use strict"; window.location.reload(); 
-            });
-
-            document.addEventListener("DOMContentLoaded", function(){
-                
-                // make it as accordion for smaller screens
+            // make it as accordion for smaller screens
                 if (window.innerWidth < 992) {
-
-                    // close all inner dropdowns when parent is closed
-                    document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
-                        everydropdown.addEventListener('hidden.bs.dropdown', function () {
-                            // after dropdown is hidden, then find all submenus
-                            this.querySelectorAll('.submenu').forEach(function(everysubmenu){
-                                // hide every submenu as well
-                                everysubmenu.style.display = 'none';
-                            });
-                        })
-                    });
-                    
-                    document.querySelectorAll('.dropdown-menu a').forEach(function(element){
-                        element.addEventListener('click', function (e) {
-                
-                            let nextEl = this.nextElementSibling;
-                            if(nextEl && nextEl.classList.contains('submenu')) {	
-                                // prevent opening link if link needs to open dropdown
-                                e.preventDefault();
-
-                                if(nextEl.style.display == 'block'){
-                                    nextEl.style.display = 'none';
-                                } else {
-                                    nextEl.style.display = 'block';
-                                }
-
-                            }
+                // close all inner dropdowns when parent is closed
+                document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+                    everydropdown.addEventListener('hidden.bs.dropdown', function () {
+                    // after dropdown is hidden, then find all submenus
+                        this.querySelectorAll('.megasubmenu').forEach(function(everysubmenu){
+                        // hide every submenu as well
+                        everysubmenu.style.display = 'none';
                         });
                     })
+                });
+
+                document.querySelectorAll('.has-submenu a').forEach(function(element){
+                    element.addEventListener('click', function (e) {
+                        let nextEl = this.nextElementSibling;
+                        if(nextEl && nextEl.classList.contains('megasubmenu')) {	
+                        // prevent opening link if link needs to open dropdown
+                        e.preventDefault();
+                        if(nextEl.style.display == 'block'){
+                            nextEl.style.display = 'none';
+                        } else {
+                            nextEl.style.display = 'block';
+                        }
+                        }
+                    });
+                }) // end foreach
                 }
                 // end if innerWidth
-
-            }); 
-        // DOMContentLoaded  end
+                }); 
     </script>
 </body>
 </html>
