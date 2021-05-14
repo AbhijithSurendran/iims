@@ -1,0 +1,27 @@
+<svg id="Group_361" data-name="Group 361" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="20" cy="20" r="20" fill="#ff7c00"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-0.011" y1="-0.011" x2="0.97" y2="0.97" gradientUnits="objectBoundingBox">
+      <stop offset="0.001" stop-color="#fbe18a"/>
+      <stop offset="0.209" stop-color="#fcbb45"/>
+      <stop offset="0.376" stop-color="#f75274"/>
+      <stop offset="0.524" stop-color="#d53692"/>
+      <stop offset="0.739" stop-color="#8f39ce"/>
+      <stop offset="1" stop-color="#5b4fe9"/>
+    </linearGradient>
+  </defs>
+  <g id="Mask_Group_4" data-name="Mask Group 4" transform="translate(0)" clip-path="url(#clip-path)">
+    <rect id="Rectangle_79" data-name="Rectangle 79" width="40" height="40" transform="translate(-0.131 0.062)" fill="url(#linear-gradient)"/>
+  </g>
+  <g id="Group_325" data-name="Group 325" transform="translate(11.2 11.2)">
+    <g id="Group_324" data-name="Group 324">
+      <g id="Group_323" data-name="Group 323">
+        <path id="Path_1498" data-name="Path 1498" d="M384.137,162.048a1.032,1.032,0,1,0,1.032,1.032A1.032,1.032,0,0,0,384.137,162.048Z" transform="translate(-370.678 -158.906)" fill="#fff"/>
+        <path id="Path_1499" data-name="Path 1499" d="M378.078,163.618a4.334,4.334,0,1,0,4.334,4.335A4.34,4.34,0,0,0,378.078,163.618Zm0,7.111a2.777,2.777,0,1,1,2.776-2.777A2.78,2.78,0,0,1,378.078,170.729Z" transform="translate(-369.205 -159.153)" fill="#fff"/>
+        <path id="Path_1500" data-name="Path 1500" d="M380.671,175.919h-7.026a5.293,5.293,0,0,1-5.287-5.287v-7.027a5.292,5.292,0,0,1,5.287-5.286h7.026a5.293,5.293,0,0,1,5.287,5.286v7.027A5.293,5.293,0,0,1,380.671,175.919Zm-7.026-15.944a3.634,3.634,0,0,0-3.631,3.63v7.027a3.635,3.635,0,0,0,3.631,3.631h7.026a3.635,3.635,0,0,0,3.631-3.631v-7.027a3.634,3.634,0,0,0-3.631-3.63Z" transform="translate(-368.358 -158.319)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

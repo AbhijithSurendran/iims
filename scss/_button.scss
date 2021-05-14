@@ -3,11 +3,14 @@
     display: inline-flex;
     align-items: flex-end;
     justify-content: center;
-    @include font-size(.8rem);
-    padding: 0.65rem 0.75rem;
+    @include font-size(.9rem);
+    padding: .9rem 1rem;
     &:focus{
         outline: none;
         box-shadow: none;
+    }
+    @media (max-width: 991.9px){
+        padding: .5rem .8rem;
     }
 }
 .btn-accent{
@@ -48,6 +51,11 @@
 }
 .primary-heading{
     color: #073B71;
+    font-weight: 500;
+    font-size: 2.5rem;
+    @media (max-width: 991.9px){
+        font-size: 1.5rem;
+    }
 }
 .text-d-blue{
     color: #272223;
