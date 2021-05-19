@@ -10,14 +10,19 @@
 html,body{
     font-family: 'Proxima-Nova';
     font-weight: 300; 
-    font-size: 16px;
     letter-spacing: .05rem;
+    @include font-size(1.2rem);
 }
 .form-control{
     &:focus{
         outline: none;
         box-shadow: none;
     }
+}
+small{
+    
+    font-size: .7rem;
+
 }
 img{
     width: 100%;
@@ -26,7 +31,7 @@ a{
     text-decoration: none;
 }
 p{
-    line-height: 2;
+    line-height: 2.3;
 }
 h1,h2,h3,h4,h5,h6{
     font-weight: 500;
@@ -226,18 +231,29 @@ header{
                         }
                     }
                 }
-                .has-submenu{
-                    .dropdown-toggle{
-                        &:hover{
-                            &::after{
-                                transform: rotate(270deg);
-                            }
+                .dropdown-menu{
+                    border: 0;
+                    box-shadow: 1px 1px 6px 0px #e6e6e6;
+                    border-radius: 0;
+                }
+                .has-submenu,.dropdown-menu{
+                    .dropdown-item{
+                        &::after{
+                            display: none;
                         }
-                        &:focus{
-                            &::after{
-                                transform: rotate(270deg);
-                            }
+                        color: #06284B;
+                        padding: .8rem 1.5rem;
+                        &:active{
+                            background-color: #06284B;
+                            color: #ffffff; 
                         }
+                    }
+                }
+                .megasubmenu{
+                    .dropdown-item{
+                        font-weight: 300;
+                        color: #06284B;
+                        padding: .8rem 1.5rem;
                     }
                 }
             }
@@ -547,10 +563,10 @@ header{
 
 .vmst{
     background-image: url('../img/vmst.jpg');
-    @include padding(3rem 0);
+    @include padding(10rem 0);
     color: #fff;
     h2{
-        @include font-size(3rem);
+        @include font-size(2.5rem);
         @include margin-bottom(4rem);
     }
     .mv-container{
@@ -618,6 +634,9 @@ header{
             }
         }
     }
+    p{
+        font-size: 1rem;
+    }
 }
 
 .key-feaatures{
@@ -637,12 +656,16 @@ header{
                 align-items: center;
                 justify-content: center;
                 i{
-                    font-size: 3rem;
+                    @include font-size(2rem);
                 }
             }
             h4{
                 text-transform: capitalize;
                 color: #073B71;
+            }
+            p{
+                @include font-size(.8rem);
+                line-height: 2;
             }
         }
     }
@@ -659,6 +682,10 @@ header{
         h2{
             @include font-size(3rem);
         }
+    }
+    p{
+        @include font-size(1rem);
+        line-height: 2
     }
 }
 
@@ -723,7 +750,7 @@ header{
                 display: -webkit-box;
                 -webkit-line-clamp: 4;
                 -webkit-box-orient: vertical;
-                @include font-size(1rem);
+                @include font-size(.8rem);
             }
         }
         @include mobile-start{
@@ -750,6 +777,12 @@ header{
                 }
             }
         }
+    }
+}
+
+.news-details{
+    .card{
+        margin-right: 0;
     }
 }
 
@@ -853,7 +886,8 @@ footer{
         .form-control{
             background-color: #122b48;
             border: 0;
-            @include font-size(1rem);
+            @include font-size(.7rem);
+            padding: .8rem 1rem;
             &::placeholder{
                 color: #ffffff;
             }
@@ -863,6 +897,7 @@ footer{
         }
         .secondary-btn{
             padding: .5rem 1.5rem;
+            font-size: .7rem;
         }
     }
     .social-ft{
@@ -970,7 +1005,7 @@ footer{
         @include padding(1rem 3rem);
         border-radius: 0 .5rem .5rem 0;
         h2{
-            @include font-size(2.5rem);
+            @include font-size(2rem);
         }
     }
     .detail-page-title{
@@ -1177,19 +1212,22 @@ footer{
 
 .courses-detail{
     ul{
+        padding-left: .8rem!important;
         li{
             margin-bottom: 1rem;
-            &:before{
-                width: 14px;
-                height: 14px;
-                background-image: url('../img/list-style.svg');
-                content: '';
-                display: inline-flex;
-                margin-right: 1rem;
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
+            font-size: .8rem;
+            padding-left: .7rem!important;
+            line-height: 2.3;
             list-style: none;
+            margin-bottom: 2rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            
+            &::marker {
+                content: url('../img/list-style.svg');
+                margin-right: 1rem;
+              }
         }
     }
     small{
