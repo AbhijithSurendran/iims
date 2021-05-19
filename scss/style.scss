@@ -1346,7 +1346,13 @@ footer{
     }
 }
 
-
+.c-calendar{
+    @include m-start{
+        .fc .fc-toolbar{
+            flex-direction: column;
+        }
+    }
+}
 
 
 

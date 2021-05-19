@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="icons/icons.css">
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="css/glider.min.css">
+    <link rel="stylesheet" href="css/fullcalandar.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -165,7 +166,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Our Team</li>
+                        <li class="breadcrumb-item active" aria-current="page">Course calender</li>
                     </ol>
                 </nav>
             </div>
@@ -177,72 +178,19 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 p-0">
-                    <img src="img/training-programs-banner.jpg" alt="">
                     <div class="page-title">
-                            <h2 class="m-0">Our Team</h2>
+                            <h2 class="m-0">Course calender</h2>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- board-of-directors -->
-        <section class="board-of-directors">
+    <!-- Partners-pages -->
+        <section class="c-calendar mb-5">
             <div class="container">
-                <div class="row text-center text-md-start">
-                    <div class="col-12 mb-4">
-                        <h3 class="primary-heading">Board of Directors</h3>
-                    </div>
-                    <div class="col-12 col-md-3 mb-3">
-                        <img src="img/b-director-1.png" alt="">
-                        <h5 class="primary-heading mb-0">Dr. George P Abraham</h5>
-                        <p class="text-d-blue">President & Managing Trustee</p>
-                    </div>
-                    <div class="col-12 col-md-3 mb-3">
-                        <img src="img/b-director-2.png" alt="">
-                        <h5 class="primary-heading mb-0">Wg. Cdr S Jayachandran</h5>
-                        <p class="text-d-blue">Group Vice President</p>
-                    </div>
-                    <div class="col-12 col-md-3 mb-3">
-                        <img src="img/b-director-3.png" alt="">
-                        <h5 class="primary-heading mb-0">Dr. Abraham George</h5>
-                        <p class="text-d-blue">Chief of EMS</p>
-                    </div>
-                    <div class="col-12 col-md-3 mb-3">
-                        <img src="img/b-director-4.png" alt="">
-                        <h5 class="primary-heading mb-0">Mrs. Gigi George</h5>
-                        <p class="text-d-blue">Trustee</p>
-                    </div>
-                    <div class="col-12 col-md-3 mb-3">
-                        <img src="img/b-director-5.png" alt="">
-                        <h5 class="primary-heading mb-0">Mr. Jacob Mammen</h5>
-                        <p class="text-d-blue">Trustee</p>
-                    </div>
-                </div>
-                <div class="row text-center text-md-start mt-4">
-                    <div class="col-12 mb-4">
-                        <h3 class="primary-heading">IIEMS Management</h3>
-                    </div>
-                    <div class="col-12 col-md-3 mb-3">
-                        <img src="img/b-director-1.png" alt="">
-                        <h5 class="primary-heading mb-0">Dr. George P Abraham</h5>
-                        <p class="text-d-blue">President & Managing Trustee</p>
-                    </div>
-                    <div class="col-12 col-md-3 mb-3">
-                        <img src="img/b-director-2.png" alt="">
-                        <h5 class="primary-heading mb-0">Wg. Cdr S Jayachandran</h5>
-                        <p class="text-d-blue">Group Vice President</p>
-                    </div>
-                    <div class="col-12 col-md-3 mb-3">
-                        <img src="img/b-director-3.png" alt="">
-                        <h5 class="primary-heading mb-0">Dr. Abraham George</h5>
-                        <p class="text-d-blue">Chief of EMS</p>
-                    </div>
-                    <div class="col-12 col-md-3 mb-3">
-                        <img src="img/b-director-4.png" alt="">
-                        <h5 class="primary-heading mb-0">Mrs. Gigi George</h5>
-                        <p class="text-d-blue">Trustee</p>
-                    </div>
+                <div class="row">
+                    <div id='calendar'></div>
                 </div>
             </div>
         </section>
@@ -379,49 +327,73 @@
     
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/glider.min.js"></script>
-
+    <script src="js/fullcalendar.min.js"></script>
     <script>
-       
+       document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
 
-        // Dropdown
-        document.addEventListener("DOMContentLoaded", function(){
-             /////// Prevent closing from click inside dropdown
-                document.querySelectorAll('.dropdown-menu').forEach(function(element){
-                element.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                });
-                });
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            themeSystem: 'pulse',
+            initialView: 'dayGridMonth',
+            initialDate: '2020-09-07',
+            contentHeight: 'auto',
+            headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            events: [
+            {
+                title: 'All Day Event',
+                start: '2020-09-01'
+            },
+            {
+                title: 'Long Event',
+                start: '2020-09-07',
+                end: '2020-09-10'
+            },
+            {
+                groupId: '999',
+                title: 'Repeating Event',
+                start: '2020-09-09T16:00:00'
+            },
+            {
+                groupId: '999',
+                title: 'Repeating Event',
+                start: '2020-09-16T16:00:00'
+            },
+            {
+                title: 'Conference',
+                start: '2020-09-11',
+                end: '2020-09-13'
+            },
+            {
+                title: 'Meeting',
+                start: '2020-09-12T10:30:00',
+                end: '2020-09-12T12:30:00'
+            },
+            {
+                title: 'Lunch',
+                start: '2020-09-12T12:00:00'
+            },
+            {
+                title: 'Meeting',
+                start: '2020-09-12T14:30:00'
+            },
+            {
+                title: 'Birthday Party',
+                start: '2020-09-13T07:00:00'
+            },
+            {
+                title: 'Click for Google',
+                url: 'http://google.com/',
+                start: '2020-09-28'
+            }
+            ]
+        });
 
-            // make it as accordion for smaller screens
-                if (window.innerWidth < 992) {
-                // close all inner dropdowns when parent is closed
-                document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
-                    everydropdown.addEventListener('hidden.bs.dropdown', function () {
-                    // after dropdown is hidden, then find all submenus
-                        this.querySelectorAll('.megasubmenu').forEach(function(everysubmenu){
-                        // hide every submenu as well
-                        everysubmenu.style.display = 'none';
-                        });
-                    })
-                });
-
-                document.querySelectorAll('.has-submenu a').forEach(function(element){
-                    element.addEventListener('click', function (e) {
-                        let nextEl = this.nextElementSibling;
-                        if(nextEl && nextEl.classList.contains('megasubmenu')) {	
-                        // prevent opening link if link needs to open dropdown
-                        e.preventDefault();
-                        if(nextEl.style.display == 'block'){
-                            nextEl.style.display = 'none';
-                        } else {
-                            nextEl.style.display = 'block';
-                        }
-                        }
-                    });
-                }) // end foreach
-                }
-                // end if innerWidth
-                }); 
+        calendar.render();
+        });
     </script>
 </body>
 </html>
