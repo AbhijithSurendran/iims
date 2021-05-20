@@ -6713,3 +6713,8 @@
   })));
   //# sourceMappingURL=bootstrap.bundle.js.map
   
+
+  function myFunction() {
+    var element = document.getElementById("nav-icon3");
+    element.classList.toggle("open");
+  }
