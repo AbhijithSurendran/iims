@@ -3,7 +3,7 @@
     display: inline-flex;
     align-items: flex-end;
     justify-content: center;
-    @include font-size(.9rem);
+    font-size:(.9rem);
     padding: .9rem 1rem;
     &:focus{
         outline: none;

@@ -1,4 +1,4 @@
-@import '../node_modules//bootstrap/scss/bootstrap.scss';
+
 @import 'button';
 @import 'mixins';
 :root{
@@ -11,7 +11,7 @@ html,body{
     font-family: 'Proxima-Nova';
     font-weight: 300; 
     letter-spacing: .05rem;
-    @include font-size(1.1rem);
+   font-size:(1.1rem);
 }
 .form-control{
     &:focus{
@@ -23,7 +23,7 @@ small{
     font-size: .7rem;
 }
 label{
-    @include font-size(.7rem)
+   font-size:(.7rem)
 }
 img{
     width: 100%;
@@ -51,7 +51,7 @@ h1,h2,h3,h4,h5,h6{
 .form-select{
     color: #6c757d;
     font-weight: 300;
-    @include font-size(.8rem);
+   font-size:(.8rem);
 }
 .title-color{
     color: #073B71;
@@ -73,7 +73,7 @@ header{
                 display: inline-flex;
                 color: #81BBE5;
                 align-items: center;
-                @include font-size(.7rem);
+               font-size:(.7rem);
                 a{
                     color: #fff;
                     font-weight: 500;
@@ -151,7 +151,7 @@ header{
                     .register-btn{
                         text-transform: uppercase;
                         min-width: 150px;
-                        @include font-size(.7rem);
+                       font-size:(.7rem);
                         margin-right: 1rem;
                         padding: 0.4rem 0.75rem;
                         @include m-mobile{
@@ -214,8 +214,8 @@ header{
                     color: #fff;
                     text-transform: uppercase;
                     font-weight: 500;
-                    @include margin-left(1rem);
-                    @include font-size(.8rem);
+                    margin-left:(1rem);
+                   font-size:(.8rem);
                     border-bottom: 4px solid transparent;
                     padding: .8rem 2rem;
                     &:hover{
@@ -252,6 +252,9 @@ header{
                 .dropdown-menu{
                     border: 0;
                     border-radius: 0;
+                }
+                .dropdown-menu[data-bs-popper]{
+                    margin-top: 0;
                 }
                 .has-submenu,.dropdown-menu{
                     .dropdown-item{
@@ -317,7 +320,7 @@ header{
         left: 3rem;
         width: 55vw;
         h2{
-            @include font-size(3.5rem);
+           font-size:(3.5rem);
         }
         p{
             overflow: hidden;
@@ -326,7 +329,7 @@ header{
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             width: 75%;
-            @include font-size(1rem);
+           font-size:(1rem);
             line-height: 2;
         }
         a{
@@ -372,14 +375,14 @@ header{
                 padding-bottom: 2rem;
                 display: inline-flex;                
                 line-height: .8;
-                @include font-size(1.8rem);
+               font-size:(1.8rem);
                 position: relative;
                 align-items: center;
                 &:first-child{
-                    @include font-size(1.2rem);
+                   font-size:(1.2rem);
                 }
                 i{
-                    @include font-size(4rem);
+                   font-size:(4rem);
                     margin-right: 1rem;
                 }
                 span{
@@ -387,7 +390,7 @@ header{
                     line-height: .6;
                 }
                 small{
-                    @include font-size(.8rem);
+                   font-size:(.8rem);
                     font-weight: 200;
                     text-transform: uppercase;
                 }
@@ -459,7 +462,7 @@ header{
 }
 
 .f-courses{
-    @include margin(7rem 0  5rem 0);
+    margin:(7rem 0  5rem 0);
     position: relative;
     .f-course-container{
         position: relative;
@@ -479,11 +482,11 @@ header{
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                @include padding(1rem);
+                padding:(1rem);
                 color: #fff;
                 border-radius: .5rem;
                 h5{
-                    @include font-size(1rem);
+                   font-size:(1rem);
                 }
             }
             .course-title-hover{
@@ -497,7 +500,7 @@ header{
                 border-radius: .5rem;
                 background-color: rgba(6, 40, 75, 0.829);
                 h5{
-                    @include font-size(1rem);
+                   font-size:(1rem);
                 }
                 p{
                     overflow: hidden;
@@ -505,7 +508,7 @@ header{
                     display: -webkit-box;
                     -webkit-line-clamp: 4;
                     -webkit-box-orient: vertical;
-                    @include font-size(.8rem);
+                   font-size:(.8rem);
                 }
                 .link{
                     border-top: 1px solid #6d7073;
@@ -514,11 +517,11 @@ header{
                     align-items: center;
                     justify-content: center;
                     text-align: center;
-                    @include padding(1rem);
+                    padding:(1rem);
                     margin-top: auto;
                     a{
                         color: #fff;
-                        @include font-size(1rem)
+                       font-size:(1rem)
                     }
                     &:hover{
                         background-color: #F4761B;
@@ -594,23 +597,23 @@ header{
     }
 }
 .poster{
-    @include margin-bottom(5rem);
+    margin:-bottom(5rem);
 }
 
 .vmst{
     background-image: url('../img/vmst.jpg');
-    @include padding(10rem 0);
+    padding:(10rem 0);
     color: #fff;
     h2{
-        @include font-size(2.5rem);
-        @include margin-bottom(4rem);
+       font-size:(2.5rem);
+        margin:-bottom(4rem);
     }
     .mv-container{
         position: relative;
         .link-arrw{
             width: 60px;
             margin: auto;
-            @include margin-top(1.5rem);
+            margin:-top(1.5rem);
             display: flex;
             opacity: 0;
         }
@@ -625,7 +628,7 @@ header{
             font-weight: 600;
             opacity: .2;
             z-index: 2;
-            @include font-size(6rem);
+           font-size:(6rem);
         }
         &:hover{
             cursor: pointer;
@@ -679,9 +682,9 @@ header{
 }
 
 .key-feaatures{
-    @include padding(5rem 0);
+    padding:(5rem 0);
     .card{
-        @include padding(1rem 1rem 3rem);
+        padding:(1rem 1rem 3rem);
         height: 100%;
         .card-body{
             .icon{
@@ -694,8 +697,10 @@ header{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                i{
-                    @include font-size(2rem);
+                img{
+                    width: 50px;
+                    height: 50px;
+                    object-fit: contain;
                 }
             }
             h4{
@@ -703,27 +708,27 @@ header{
                 color: #073B71;
             }
             p{
-                @include font-size(.8rem);
+               font-size:(.8rem);
                 line-height: 2;
             }
         }
     }
     h3{
-        @include margin-bottom(2rem);
+        margin:-bottom(2rem);
     }
 }
 
 .contact-form{
     background-image: url('../img/form.jpg');
-    @include padding(5rem 0);
+    padding:(5rem 0);
     .texting{
         color: #ffffff;
         h2{
-            @include font-size(3rem);
+           font-size:(3rem);
         }
     }
     p{
-        @include font-size(1rem);
+       font-size:(1rem);
         line-height: 2
     }
     @include m-mobile{
@@ -740,15 +745,15 @@ header{
 }
 
 .affliation{
-    @include margin-bottom(4rem);
+    margin:-bottom(4rem);
     .container{
         background-color: #f5f5f5;        
-        @include padding-top(4rem);
-        @include padding-bottom(4rem);
+        padding:-top(4rem);
+        padding:-bottom(4rem);
         border-radius: 0 0 1rem 1rem;
     }
     ul{
-        @include margin(2rem 0);
+        margin:(2rem 0);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -788,8 +793,8 @@ header{
 
 .news{
     position: relative;
-    @include margin-bottom(5.5rem);
-    @include margin-top(1.5rem);
+    margin:-bottom(5.5rem);
+    margin:-top(1.5rem);
     .glider-contain{
         margin-left: 15px;
         @include mobile-start{
@@ -803,7 +808,7 @@ header{
         font-size: .8rem;
     }
     .card{
-        @include margin-right(1rem);
+        margin:-right(1rem);
         .card-body{
             .card-text{
                 overflow: hidden;
@@ -811,7 +816,7 @@ header{
                 display: -webkit-box;
                 -webkit-line-clamp: 4;
                 -webkit-box-orient: vertical;
-                @include font-size(.8rem);
+               font-size:(.8rem);
             }
         }
         @include mobile-start{
@@ -849,7 +854,7 @@ header{
 
 .branch{
     background-color: #4E6076;
-    @include padding(2rem 0);
+    padding:(2rem 0);
     ul{
         align-items: center;
         justify-content: space-between;
@@ -863,13 +868,13 @@ header{
             position: relative;
             span{
                 display: block;
-                @include font-size(.8rem);
+               font-size:(.8rem);
                 a{
                     color: #ffffff;
                 }
                 &:first-child{
                     font-weight: 500;
-                    @include font-size(1.1rem);
+                   font-size:(1.1rem);
                 }
             }
             &:after{
@@ -903,7 +908,7 @@ header{
 
 footer{
     background-color: #05182E;
-    @include padding(2rem 0);
+    padding:(2rem 0);
     .link{
         margin: 0;
         padding: 0;
@@ -920,7 +925,7 @@ footer{
             }
             a{  
                 color: #abbcc1;
-                @include font-size(.8rem);
+               font-size:(.8rem);
                 &:hover{
                     color: #ffffff;
                 }
@@ -947,7 +952,7 @@ footer{
         .form-control{
             background-color: #122b48;
             border: 0;
-            @include font-size(.7rem);
+           font-size:(.7rem);
             padding: .8rem 1rem;
             &::placeholder{
                 color: #ffffff;
@@ -962,7 +967,7 @@ footer{
         }
     }
     .social-ft{
-        @include margin-top(2.5rem);
+        margin:-top(2.5rem);
         flex-flow: column;
         ul{
             padding: 0;
@@ -970,7 +975,7 @@ footer{
             li{
                 all:unset;
                 display: inline-flex;
-                @include margin-right(2rem);
+                margin:-right(2rem);
                 a{  
                     display: flex;
                     color: #abbcc1;
@@ -1000,7 +1005,7 @@ footer{
         h6{
             margin: 0;
         }
-        @include margin-top(3rem);
+        margin:-top(3rem);
         h6{
         font-size: .8rem;
         font-weight: 300;
@@ -1016,7 +1021,7 @@ footer{
         ul{
             li{
                 display: inline-block;  
-                @include margin-right(1rem);      
+                margin:-right(1rem);      
             }
         }
     }
@@ -1078,10 +1083,10 @@ footer{
         left: 0;
         background-color: #181C24;
         color: #fff;
-        @include padding(1rem 3rem);
+        padding:(1rem 3rem);
         border-radius: 0 .5rem .5rem 0;
         h2{
-            @include font-size(1.8rem);
+           font-size:(1.8rem);
             @include m-mobile{
                 font-size: 1rem;
             }
@@ -1121,7 +1126,7 @@ footer{
 
 .about{
     position: relative;
-    @include margin (3rem 0);
+    margin: (3rem 0);
     
     .content-area{        
         position: relative;
@@ -1145,7 +1150,7 @@ footer{
                 li{
                     display: inline-flex;                
                     line-height: .8;
-                    @include font-size(2rem);
+                   font-size:(2rem);
                     color: #073B71;
                     align-items: center;
                     position: relative;
@@ -1159,7 +1164,7 @@ footer{
                         }
                     }
                     small{
-                        @include font-size(.8rem);
+                       font-size:(.8rem);
                         color: #454545;
                     }
                     @include m-mobile{
@@ -1206,25 +1211,25 @@ footer{
     }
 }
 .registration{
-    @include margin(5rem 0);
+    margin:(5rem 0);
     .container{
         .head-bg{
             &:first-child{
                 background-image: url('../img/reg-bg.jpg');
                 background-size: cover;
                 background-position: top;
-                @include padding(3rem 0);
+                padding:(3rem 0);
                 color: #ffffff; 
                 border-radius: 1rem 1rem 0 0;
             }
             .h1{                
-                @include font-size(3rem);
+               font-size:(3rem);
             }
         }  
         .content-bg{
             background-color: #F5F5F5;
             border-radius: 0 0 .5rem .5rem;
-            @include padding(4rem 0);
+            padding:(4rem 0);
             img{
                 width: 160px;
                 margin: auto;
@@ -1243,6 +1248,9 @@ footer{
             background-color: var(--orange);
             opacity: .8;
         }
+    }
+    .corner{
+        border-radius: 1.2rem!important;
     }
 }
 .courses{
@@ -1266,7 +1274,7 @@ footer{
             color: #073B71;
             padding-left: 0;
             padding-right: 0;
-            @include font-size(1.3rem);
+           font-size:(1.3rem);
             &:focus{
                 box-shadow: none;
             }
@@ -1319,7 +1327,7 @@ footer{
             line-height: 2.3;
             list-style: none;
             margin-bottom: 2rem;
-            @include font-size(1em);
+           font-size:(1em);
             &:last-child{
                 margin-bottom: 0;
             }
@@ -1391,7 +1399,7 @@ footer{
         font-size: .7rem;
     }
     .card-title{
-        font-size: 1rem;
+        font-size: .8rem;
     }
 }
 
@@ -1403,7 +1411,7 @@ footer{
             display: -webkit-box;
             -webkit-line-clamp: 1; /* number of lines to show */
             -webkit-box-orient: vertical;
-            @include font-size(1rem);
+           font-size:(1rem);
         }
         .card-link{
             width: 100%;
@@ -1412,7 +1420,7 @@ footer{
             display: block;
             padding-top: 1rem;
             margin-top: 1.5rem;
-            @include font-size(.8rem);
+           font-size:(.8rem);
         }
     }
 }
@@ -1463,7 +1471,7 @@ footer{
         font-size: .85rem;
     }
     .primary-heading{
-        @include font-size(1.2rem);
+       font-size:(1.2rem);
     }
 }
 
@@ -1517,7 +1525,7 @@ footer{
         }
     }
     .fc{
-        @include font-size(1rem);
+       font-size:(1rem);
         .fc-button{
             text-transform: capitalize;
             border-radius: 0;
@@ -1559,6 +1567,34 @@ footer{
     }
 }
 
+.careers{
+    .accordion-item{
+        border: 1px solid #f1f1f1!important;
+        margin-bottom: 1rem;
+    }
+    .accordion-header{
+        background-color: #f1f1f1;
+        padding:.5rem 1.5rem;
+        .h6{
+            font-size: .8rem;
+            font-weight: 300;
+        }
+    }
+    .accordion-button{
+        background-color: #f1f1f1;
+        @include m-mobile{
+            font-size: 1.3rem!important;
+        }
+    }
+    .accordion-body{
+        padding: 1.5rem!important;
+    }
+    ul{
+        li{
+            font-size: .9rem;
+        }
+    }
+}
 
 
 
@@ -1580,7 +1616,7 @@ footer{
 	.megasubmenu{ 
 		left:100%;
         top:0;
-        margin-left: .2rem;
+        margin-left:-.8px;
 	}
 
 	.dropdown-menu > li:hover .megasubmenu{
