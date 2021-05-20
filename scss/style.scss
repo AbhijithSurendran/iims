@@ -11,7 +11,7 @@ html,body{
     font-family: 'Proxima-Nova';
     font-weight: 300; 
     letter-spacing: .05rem;
-   font-size:(1.1rem);
+   font-size:1.1rem;
 }
 .form-control{
     &:focus{
@@ -23,7 +23,7 @@ small{
     font-size: .7rem;
 }
 label{
-   font-size:(.7rem)
+   font-size:.7rem;
 }
 img{
     width: 100%;
@@ -51,7 +51,7 @@ h1,h2,h3,h4,h5,h6{
 .form-select{
     color: #6c757d;
     font-weight: 300;
-   font-size:(.8rem);
+   font-size:.8rem;
 }
 .title-color{
     color: #073B71;
@@ -73,7 +73,7 @@ header{
                 display: inline-flex;
                 color: #81BBE5;
                 align-items: center;
-               font-size:(.7rem);
+               font-size:.7rem;
                 a{
                     color: #fff;
                     font-weight: 500;
@@ -88,6 +88,9 @@ header{
                         a{
                             font-weight: 300;
                             text-transform: uppercase;
+                            &:hover{
+                                color: #81bbe5;
+                            }
                         }
                     }
                 }
@@ -151,7 +154,7 @@ header{
                     .register-btn{
                         text-transform: uppercase;
                         min-width: 150px;
-                       font-size:(.7rem);
+                       font-size:.7rem;
                         margin-right: 1rem;
                         padding: 0.4rem 0.75rem;
                         @include m-mobile{
@@ -214,8 +217,8 @@ header{
                     color: #fff;
                     text-transform: uppercase;
                     font-weight: 500;
-                    margin-left:(1rem);
-                   font-size:(.8rem);
+                    margin-left:1rem;
+                   font-size:.8rem;
                     border-bottom: 4px solid transparent;
                     padding: .8rem 2rem;
                     &:hover{
@@ -320,7 +323,11 @@ header{
         left: 3rem;
         width: 55vw;
         h2{
-           font-size:(3.5rem);
+           font-size:3.5rem;
+           
+        @include m-start{
+            font-size: 1.5rem;
+        }
         }
         p{
             overflow: hidden;
@@ -329,7 +336,7 @@ header{
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             width: 75%;
-           font-size:(1rem);
+           font-size:1rem;
             line-height: 2;
         }
         a{
@@ -375,14 +382,14 @@ header{
                 padding-bottom: 2rem;
                 display: inline-flex;                
                 line-height: .8;
-               font-size:(1.8rem);
+               font-size:1.8rem;
                 position: relative;
                 align-items: center;
                 &:first-child{
-                   font-size:(1.2rem);
+                   font-size:1.2rem;
                 }
                 i{
-                   font-size:(4rem);
+                   font-size:4rem;
                     margin-right: 1rem;
                 }
                 span{
@@ -390,7 +397,7 @@ header{
                     line-height: .6;
                 }
                 small{
-                   font-size:(.8rem);
+                   font-size:.8rem;
                     font-weight: 200;
                     text-transform: uppercase;
                 }
@@ -462,8 +469,11 @@ header{
 }
 
 .f-courses{
-    margin:(7rem 0  5rem 0);
+    margin:7rem 0  5rem 0;
     position: relative;
+    small{
+        font-size: .9rem;
+    }
     .f-course-container{
         position: relative;
         margin-right: 1rem;
@@ -482,11 +492,11 @@ header{
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                padding:(1rem);
+                padding:1rem;
                 color: #fff;
                 border-radius: .5rem;
                 h5{
-                   font-size:(1rem);
+                   font-size:1.3rem;
                 }
             }
             .course-title-hover{
@@ -500,7 +510,7 @@ header{
                 border-radius: .5rem;
                 background-color: rgba(6, 40, 75, 0.829);
                 h5{
-                   font-size:(1rem);
+                   font-size:1rem;
                 }
                 p{
                     overflow: hidden;
@@ -508,7 +518,7 @@ header{
                     display: -webkit-box;
                     -webkit-line-clamp: 4;
                     -webkit-box-orient: vertical;
-                   font-size:(.8rem);
+                   font-size:.8rem;
                 }
                 .link{
                     border-top: 1px solid #6d7073;
@@ -517,11 +527,11 @@ header{
                     align-items: center;
                     justify-content: center;
                     text-align: center;
-                    padding:(1rem);
+                    padding:1rem;
                     margin-top: auto;
                     a{
                         color: #fff;
-                       font-size:(1rem)
+                       font-size:1rem;
                     }
                     &:hover{
                         background-color: #F4761B;
@@ -597,23 +607,26 @@ header{
     }
 }
 .poster{
-    margin:-bottom(5rem);
+    margin-bottom: 5rem;
 }
 
 .vmst{
     background-image: url('../img/vmst.jpg');
-    padding:(10rem 0);
+    padding:10rem 0;
     color: #fff;
     h2{
-       font-size:(2.5rem);
-        margin:-bottom(4rem);
+       font-size:2.5rem;
+        margin-bottom:4rem;
+        @media (max-width: 1023px){
+        font-size: 1.8rem;
+        }
     }
     .mv-container{
         position: relative;
         .link-arrw{
             width: 60px;
             margin: auto;
-            margin:-top(1.5rem);
+            margin-top:1.5rem;
             display: flex;
             opacity: 0;
         }
@@ -628,7 +641,10 @@ header{
             font-weight: 600;
             opacity: .2;
             z-index: 2;
-           font-size:(6rem);
+           font-size:6rem;
+           @media (max-width: 1300px){
+               font-size: 3rem;
+           }
         }
         &:hover{
             cursor: pointer;
@@ -667,6 +683,13 @@ header{
                 top: 68%;
             }
         }
+        .rounded{
+            min-height: 300px;
+            object-fit: cover;
+            @media (max-width: 767.9px) {
+                min-height: unset;
+            }
+        }
         @include mobile-start{
             height: 100px;
             margin-bottom: 1.5rem;
@@ -679,13 +702,17 @@ header{
     p{
         font-size: 1rem;
     }
+    @include mobile-start{
+        padding: 5rem 0;
+    }
 }
 
 .key-feaatures{
-    padding:(5rem 0);
+    padding:5rem 0;
     .card{
-        padding:(1rem 1rem 3rem);
+        padding:1rem 1rem 3rem;
         height: 100%;
+        
         .card-body{
             .icon{
                 width: 100px;
@@ -704,31 +731,37 @@ header{
                 }
             }
             h4{
-                text-transform: capitalize;
+                text-transform: uppercase;
                 color: #073B71;
             }
             p{
-               font-size:(.8rem);
+               font-size:.8rem;
                 line-height: 2;
+            }
+        }
+        &:hover{
+            background-color: #FAFAFA;
+            .icon{
+                opacity: .8;
             }
         }
     }
     h3{
-        margin:-bottom(2rem);
+        margin-bottom:2rem;
     }
 }
 
 .contact-form{
     background-image: url('../img/form.jpg');
-    padding:(5rem 0);
+    padding:5rem 0;
     .texting{
         color: #ffffff;
         h2{
-           font-size:(3rem);
+           font-size:3rem;
         }
     }
     p{
-       font-size:(1rem);
+       font-size:1rem;
         line-height: 2
     }
     @include m-mobile{
@@ -741,19 +774,23 @@ header{
     .form-control,.form-select{
         padding: .8rem .75rem;
         font-size: 1rem;
+        @include m-mobile{
+            padding: .3rem .75rem;
+            font-size: .8rem;
+        }
     }
 }
 
 .affliation{
-    margin:-bottom(4rem);
+    margin-bottom:4rem;
     .container{
         background-color: #f5f5f5;        
-        padding:-top(4rem);
-        padding:-bottom(4rem);
+        padding-top:4rem;
+        padding-bottom:4rem;
         border-radius: 0 0 1rem 1rem;
     }
     ul{
-        margin:(2rem 0);
+        margin:2rem 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -793,8 +830,11 @@ header{
 
 .news{
     position: relative;
-    margin:-bottom(5.5rem);
-    margin:-top(1.5rem);
+    margin-bottom:5.5rem;
+    margin-top:1.5rem;
+    @include mobile-start{
+        overflow: hidden;
+    }
     .glider-contain{
         margin-left: 15px;
         @include mobile-start{
@@ -806,9 +846,12 @@ header{
     }
     .link-btn{
         font-size: .8rem;
+        @include mobile-start{
+            display: none;
+        }
     }
     .card{
-        margin:-right(1rem);
+        margin-right:1rem;
         .card-body{
             .card-text{
                 overflow: hidden;
@@ -816,7 +859,7 @@ header{
                 display: -webkit-box;
                 -webkit-line-clamp: 4;
                 -webkit-box-orient: vertical;
-               font-size:(.8rem);
+               font-size:.8rem;
             }
         }
         @include mobile-start{
@@ -829,14 +872,14 @@ header{
             top: 45%;
             width: 95%;
             .news-next{
-                right: -3px;
+                right: -1px;
                 position: absolute;
                 img{
                     width: 60%;
                 }
             }
             .news-prev {
-                left: -7px;
+                left: -33px;
                 position: absolute;
                 img{
                     width: 60%;
@@ -854,7 +897,7 @@ header{
 
 .branch{
     background-color: #4E6076;
-    padding:(2rem 0);
+    padding:2rem 0;
     ul{
         align-items: center;
         justify-content: space-between;
@@ -868,13 +911,13 @@ header{
             position: relative;
             span{
                 display: block;
-               font-size:(.8rem);
+               font-size:.8rem;
                 a{
                     color: #ffffff;
                 }
                 &:first-child{
                     font-weight: 500;
-                   font-size:(1.1rem);
+                   font-size:1.1rem;
                 }
             }
             &:after{
@@ -908,7 +951,7 @@ header{
 
 footer{
     background-color: #05182E;
-    padding:(2rem 0);
+    padding:2rem 0;
     .link{
         margin: 0;
         padding: 0;
@@ -925,7 +968,7 @@ footer{
             }
             a{  
                 color: #abbcc1;
-               font-size:(.8rem);
+               font-size:.8rem;
                 &:hover{
                     color: #ffffff;
                 }
@@ -952,7 +995,7 @@ footer{
         .form-control{
             background-color: #122b48;
             border: 0;
-           font-size:(.7rem);
+           font-size:.7rem;
             padding: .8rem 1rem;
             &::placeholder{
                 color: #ffffff;
@@ -967,7 +1010,7 @@ footer{
         }
     }
     .social-ft{
-        margin:-top(2.5rem);
+        margin-top:2.5rem;
         flex-flow: column;
         ul{
             padding: 0;
@@ -975,7 +1018,7 @@ footer{
             li{
                 all:unset;
                 display: inline-flex;
-                margin:-right(2rem);
+                margin-right:2rem;
                 a{  
                     display: flex;
                     color: #abbcc1;
@@ -1005,7 +1048,7 @@ footer{
         h6{
             margin: 0;
         }
-        margin:-top(3rem);
+        margin-top:3rem;
         h6{
         font-size: .8rem;
         font-weight: 300;
@@ -1021,7 +1064,7 @@ footer{
         ul{
             li{
                 display: inline-block;  
-                margin:-right(1rem);      
+                margin-right:1rem;      
             }
         }
     }
@@ -1083,10 +1126,10 @@ footer{
         left: 0;
         background-color: #181C24;
         color: #fff;
-        padding:(1rem 3rem);
+        padding:1rem 3rem;
         border-radius: 0 .5rem .5rem 0;
         h2{
-           font-size:(1.8rem);
+           font-size:1.8rem;
             @include m-mobile{
                 font-size: 1rem;
             }
@@ -1126,14 +1169,17 @@ footer{
 
 .about{
     position: relative;
-    margin: (3rem 0);
-    
+    margin: 3rem 0;
+    p{
+        font-size: 1rem;
+        line-height: 2;
+    }
     .content-area{        
         position: relative;
         .slider-goals{
             position: absolute;
             left: 0;
-            bottom: -80px;
+            bottom: -120px;
             padding: 1rem;
             padding-top: 4rem;
             padding-bottom: 4rem;
@@ -1150,7 +1196,7 @@ footer{
                 li{
                     display: inline-flex;                
                     line-height: .8;
-                   font-size:(2rem);
+                   font-size:2rem;
                     color: #073B71;
                     align-items: center;
                     position: relative;
@@ -1164,7 +1210,7 @@ footer{
                         }
                     }
                     small{
-                       font-size:(.8rem);
+                       font-size:.8rem;
                         color: #454545;
                     }
                     @include m-mobile{
@@ -1182,6 +1228,10 @@ footer{
     position: relative;
     .pr{
        width: 100px; 
+    }
+    p{
+        font-size: 1rem;
+        line-height: 2;
     }
     h6{
         font-weight: 300;
@@ -1209,27 +1259,35 @@ footer{
             bottom: -3rem;
         }
     }
+    .name{
+        h5{
+            font-size: 1rem;
+        }
+        h6{
+            font-size: .9rem;
+        }
+    }
 }
 .registration{
-    margin:(5rem 0);
+    margin:5rem 0;
     .container{
         .head-bg{
             &:first-child{
                 background-image: url('../img/reg-bg.jpg');
                 background-size: cover;
                 background-position: top;
-                padding:(3rem 0);
+                padding:3rem 0;
                 color: #ffffff; 
                 border-radius: 1rem 1rem 0 0;
             }
             .h1{                
-               font-size:(3rem);
+               font-size:3rem;
             }
         }  
         .content-bg{
             background-color: #F5F5F5;
             border-radius: 0 0 .5rem .5rem;
-            padding:(4rem 0);
+            padding:4rem 0;
             img{
                 width: 160px;
                 margin: auto;
@@ -1274,7 +1332,7 @@ footer{
             color: #073B71;
             padding-left: 0;
             padding-right: 0;
-           font-size:(1.3rem);
+           font-size:1.3rem;
             &:focus{
                 box-shadow: none;
             }
@@ -1327,7 +1385,7 @@ footer{
             line-height: 2.3;
             list-style: none;
             margin-bottom: 2rem;
-           font-size:(1em);
+           font-size:1em;
             &:last-child{
                 margin-bottom: 0;
             }
@@ -1411,7 +1469,7 @@ footer{
             display: -webkit-box;
             -webkit-line-clamp: 1; /* number of lines to show */
             -webkit-box-orient: vertical;
-           font-size:(1rem);
+           font-size:1rem;
         }
         .card-link{
             width: 100%;
@@ -1420,7 +1478,7 @@ footer{
             display: block;
             padding-top: 1rem;
             margin-top: 1.5rem;
-           font-size:(.8rem);
+           font-size:.8rem;
         }
     }
 }
@@ -1471,7 +1529,7 @@ footer{
         font-size: .85rem;
     }
     .primary-heading{
-       font-size:(1.2rem);
+       font-size:1.2rem;
     }
 }
 
@@ -1525,7 +1583,7 @@ footer{
         }
     }
     .fc{
-       font-size:(1rem);
+       font-size:1rem;
         .fc-button{
             text-transform: capitalize;
             border-radius: 0;
@@ -1617,6 +1675,7 @@ footer{
 		left:100%;
         top:0;
         margin-left:-.8px;
+        height: 100%;
 	}
 
 	.dropdown-menu > li:hover .megasubmenu{
